@@ -24,6 +24,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static constants.AppConstants.CSV_BASE_PATH;
 import static constants.AppConstants.MAX_RETRY_COUNT;
 import static constants.GssUrls.*;
 
@@ -307,7 +308,7 @@ public class GSSApiService implements ApiService {
     }
 
     private static String getCsvOutputFileName(String tableName) {
-        String baseDir = "D:\\projects\\customer\\DataX\\csvs\\";
+        String baseDir = CSV_BASE_PATH;
         String baseName = tableName;
         String extension = ".csv";
         int counter = 0;
@@ -321,5 +322,3 @@ public class GSSApiService implements ApiService {
         return baseDir + fileName;
     }
 }
-
-
